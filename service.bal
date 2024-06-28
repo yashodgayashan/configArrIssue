@@ -16,7 +16,7 @@ configurable readonly & Person[] people = ?;
 
 configurable readonly & int age = ?;
 
-configurable readonly & string names = ?;
+configurable readonly & string[] names = ?;
 
 # A service representing a network-accessible API
 # bound to port `9090`.
