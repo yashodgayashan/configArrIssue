@@ -32,7 +32,7 @@ service / on new http:Listener(9090) {
        
     }
 
-    resource function get congigs() returns string|Person[]|error {
+    resource function get congigs() returns string[]|error {
         // Send a response back to the caller.
 
         return names;
