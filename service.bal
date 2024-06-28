@@ -10,10 +10,13 @@ type Person record {
 
 };
 
+
+
 configurable readonly & Person[] people = ?;
 
 configurable readonly & int age = ?;
 
+configurable readonly & string names = ?;
 
 # A service representing a network-accessible API
 # bound to port `9090`.
@@ -26,6 +29,13 @@ service / on new http:Listener(9090) {
         // Send a response back to the caller.
 
         return people;
+       
+    }
+
+    resource function get congigs() returns string|Person[]|error {
+        // Send a response back to the caller.
+
+        return names;
        
     }
 }
